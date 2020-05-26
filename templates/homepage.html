@@ -1,0 +1,31 @@
+<style>
+.notification {
+  margin: auto;
+  width: 30%;
+  padding: 2%;
+  border: 2px solid black;
+}
+.align {
+  display: flex;
+  justify-content: space-between;
+}
+.width{
+    width: 50%
+}
+.vertical-center {
+  position:relative;
+  left:40%;
+}
+.margin{
+    margin-bottom:10px;
+}
+</style>
+<div class="notification">
+    <h2>Notifications System</h2>
+    <h4><font color="FF0000"> {{response_message}}</font></h4>
+    <ul>
+        <li><a href="/admin">Send Notifications</a></li>
+        <li><a href="/subscriber">Add User and Subscriptions</a></li>
+        <li><a href="/addCategories">Create a category</a></li>
+    </ul>
+</div>

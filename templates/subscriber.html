@@ -1,0 +1,32 @@
+<style>
+.notification {
+  margin: auto;
+  width: 30%;
+  padding: 2%;
+  border: 2px solid black;
+}
+.align {
+  display: flex;
+  justify-content: space-between;
+}
+.margin{
+    margin-bottom:10px;
+}
+</style>
+
+<form class="notification" action="/subscriber" method="post">
+    <h2>Subscribe to an Notification</h2>
+    <h4><font color="FF0000">Select the notifications to be subscribed</font></h4>
+    {% for category in category_list %}
+        <input class="margin" type="checkbox" name="subscriptions" value="{{category}}" >{{category}}</input> <BR>
+    {% endfor %}
+    <div class="align margin">
+        <input name="UserName" placeholder="Enter the UserName" />
+        <input name="UserPhone" placeholder="Enter the UserPhone" />
+    </div>
+    <div class="align margin">
+        <input name="UserEmail" placeholder="Enter the UserEmail" />
+        <input name="UserPortal" placeholder="Enter the UserPortal" />
+    </div>
+    <input type="submit">
+</form>

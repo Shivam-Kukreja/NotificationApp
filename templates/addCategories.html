@@ -1,0 +1,30 @@
+<style>
+.notification {
+  margin: auto;
+  width: 30%;
+  padding: 2%;
+  border: 2px solid black;
+}
+.align {
+  display: flex;
+  justify-content: space-between;
+}
+.width{
+    width: 50%
+}
+.margin{
+    margin-bottom:10px;
+}
+</style>
+
+
+<form class="notification" action="/addCategories" method="post">
+    <h2>Create new Notification</h2>
+    <h4><font color="FF0000">Select the modes of Communication applicable</font></h4>
+    {% for mode in modes_of_commnunication %}
+        <input class="margin" type="checkbox" name="mode" value="{{mode}}" >{{mode}}</input> <BR>
+    {% endfor %}
+
+	<input class="width margin" type="e-mail" class="width" name="TriggerName" placeholder="Enter the Notification Category" />
+	<input type="submit">
+</form>

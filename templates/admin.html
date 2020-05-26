@@ -1,0 +1,35 @@
+<style>
+.notification {
+  margin: auto;
+  width: 30%;
+  padding: 2%;
+  border: 2px solid black;
+}
+.align {
+  display: flex;
+  justify-content: space-between;
+}
+.width{
+    width: 50%
+}
+.vertical-center {
+  position:relative;
+  left:40%;
+}
+.margin{
+    margin-bottom:10px;
+}
+</style>
+
+<form class="notification" action="/admin" method = "POST">
+  <h2>Admin Panel</h2>
+  <label>Choose Category:</label>
+  <select name="Category">
+    {% for category in category_list %}
+    <option class= "margin" value="{{ category }}">{{ category }}</option>
+    {% endfor %}
+    </select>
+  <input class="width margin" name="TriggerNotificationMsg" placeholder="Enter the Notification Message" />
+  <input class="vertical-center" type="submit">
+
+</form>
