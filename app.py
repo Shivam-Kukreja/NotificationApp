@@ -41,11 +41,11 @@ def render_homepage():
 
 if __name__ == '__main__':
     obj = Notification_Driver_Main.getDriver()
-    # obj.addCategory('EVENT', ['EMAIL', 'PORTAL'])
-    # obj.addCategory('HOLIDAY', ['PORTAL'])
-    # obj.Subscribe(name='Gaurav', email='gauravarora011@gmail.com', phone='7508819230',
-    #               naggaro_portal_id='123', subscribe_list=['EVENT','HOLIDAY'])
-    # obj.Subscribe(name='Nikhil', email='banwari@test.com', phone='9667519930',
-    #               naggaro_portal_id='139174', subscribe_list=['EVENT'])
-    # obj.GenerateNotification('EVENT','woohoo')
+    obj.addCategory('EVENT', ['EMAIL', 'PORTAL'])
+    obj.addCategory('HOLIDAY', ['PORTAL'])
+    obj.Subscribe(name='testUser1', email='test@test.com', phone='4748284722',
+                  naggaro_portal_id='123', subscribe_list=['EVENT','HOLIDAY'])
+    obj.Subscribe(name='testUSer2', email='test1@test.com', phone='2782174824',
+                  naggaro_portal_id='139174', subscribe_list=['EVENT'])
+    obj.GenerateNotification('EVENT','woohoo')
     app.run()
