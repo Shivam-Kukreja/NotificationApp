@@ -8,6 +8,7 @@ class NotificationEngine(metaclass=ABCMeta):
 
     _INSTANCE = None
 
+    """Create's a single instance of the class"""
     @classmethod
     def singleton(cls):
         if cls._INSTANCE is None:
@@ -19,6 +20,7 @@ class NotificationEngine(metaclass=ABCMeta):
     def create_singleton(cls):
         pass
 
+    """Abstract method to trigger the notification engine"""
     @abstractmethod
     def trigger_notification():
         pass
